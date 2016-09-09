@@ -1,0 +1,16 @@
+<div class="text-center signUpsList">
+	<div class="viewSignUpHeader">
+			<h1>Signed Up Users</h1>
+			<input class="searchResults" ng-model="query">
+	</div>
+		<div data-ng-repeat="userSignUp in (filteredItems  = (userSignUps | orderBy: 'order_prop' | filter:query))"> 
+				<div class="innerGroupSignUps center-block">				
+					<h4><label>First Name:</label><span> {{userSignUp.firstname}}</span></h4>
+					<h4><label>Last Name:</label><span> {{userSignUp.lastname}}</span></h4>
+					<h4><label>Email:</label><span> {{userSignUp.email}}</span></h4>
+					<h4><label>Zipcode:</label><span> {{userSignUp.zip}}</span>	</h4>
+				</div>
+		</div>
+	</div>
+
+<a ng-href="#/signup">SignUp</a>

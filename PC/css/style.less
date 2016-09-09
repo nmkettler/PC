@@ -1,0 +1,449 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+@mainBlue: #326e8a;
+@mainYellow: #fdde33;
+@mainGreen: #a8e4b7;
+
+
+#centerItems{
+	left: 0;
+    line-height: 200px;
+    margin-top: -150px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+
+* {
+margin:0;
+padding:0;
+font-family: 'Roboto', sans-serif;
+
+}
+
+html, body{
+	margin-top:0;
+	padding-top:0;
+	height: 100%;
+  	width: 100%;
+}
+
+h1{margin:0;}
+
+/*=========Navigation==============*/
+
+.navbar{
+	background: rgba(0,0,0,0);
+	padding: 15px 0px;
+	margin-bottom: 0;
+	border:none;
+	font-size: 15px;
+	-webkit-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+.navbar-default .navbar-nav li a{
+	color:#fff;
+
+	&:hover{
+		color:#f5f7d8;
+	}
+}
+
+.logo{
+	width:50px;
+}
+
+/*=========Homepage========*/
+#homeButtons{
+	font-weight: 700;
+	font-size: 20px;
+	border:none;
+	width: 190px;
+	height: 60px;
+	margin: 0px 10px;
+	border-radius: 0 !important;
+}
+#homeButtonsMobile{
+	font-weight: 700;
+	font-size: 15px;
+	border:none;
+	width: 160px;
+	height: 50px;
+	margin:5px 0 5px 20px;
+	border-radius: 0 !important;
+	display:block;
+}
+
+@media screen and (min-width:785px){
+
+	.main-hero-bg{
+	height: 995px; 
+	width:100%;
+	opacity: 1; 
+	background: url(images/photodune-10414652-on-the-c.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+ 	 margin-top: -50px;
+ 	 position:relative;
+	}
+
+	.headerInfo{
+		#centerItems;
+
+		h1{
+			color:#fff;
+			font-size: 40px;
+			font-weight: 700;
+		}
+		h4{
+			color:#fff;
+			font-size: 20px;
+		}
+	}
+
+	#signUpBtn{
+	background-color: @mainYellow; 
+	color: @mainBlue;
+	#homeButtons;
+
+	&:hover{
+	background-color:#cdb42b; 
+	}
+
+	}
+	#learnMoreBtn{
+	background-color:@mainBlue; 
+	color: @mainYellow;
+	#homeButtons;
+
+		&:hover{
+			background-color:#2a5b72;
+		}
+	}
+
+	.scrollArrowOuter{ /* Make parent elemnts width 100% so child (scrollArrow) can center*/
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	}
+	.scrollArrow{	
+		width:70px; 
+		height:70px;
+		margin:0px auto;
+		border: 1px solid #fff;
+		border-radius:50px;
+		background: rgba(0,0,0,0);
+		color: #fff;
+		-webkit-transition: all 200ms ease-in;
+	    -ms-transition: all 200ms ease-in;
+	    -moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;		
+
+		&:hover{
+			background: @mainBlue;
+			color: @mainYellow;
+			border-color: @mainYellow;
+
+		}
+	}
+
+	.scrollArrow span{
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width:785px){
+	.main-hero-bg{
+	height: 667px; 
+	width:100%;
+	opacity: 1; 
+	background: url(images/photodune-10414652-on-the-c.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+ 	 margin-top: -50px;
+ 	 position:relative;
+	}
+
+	.headerInfo{
+		#centerItems;
+
+		h1{
+			color:#fff;
+			font-size: 30px;
+			font-weight: 700;
+		}
+		h4{
+			color:#fff;
+			font-size: 15px;
+		}
+	}
+
+	#signUpBtn{
+	background-color: @mainYellow; 
+	color: @mainBlue;
+	#homeButtonsMobile;
+
+	&:hover{
+	background-color:#cdb42b; 
+	}
+
+	}
+	#learnMoreBtn{
+	background-color:@mainBlue; 
+	color: @mainYellow;
+	#homeButtonsMobile;
+
+		&:hover{
+			background-color:#2a5b72;
+		}
+	}
+	.scrollArrowOuter{ /* Make parent elemnts width 100% so child (scrollArrow) can center*/
+	position:absolute;
+	bottom:10px;
+	width:100%;
+	}
+	.scrollArrow{	
+		width:35px; 
+		height:35px;
+		margin:0px auto;
+		border: 1px solid #fff;
+		border-radius:50px;
+		background: rgba(0,0,0,0);
+		color: #fff;
+		-webkit-transition: all 200ms ease-in;
+	    -ms-transition: all 200ms ease-in;
+	    -moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;		
+
+		&:hover{
+			background: @mainBlue;
+			color: @mainYellow;
+			border-color: @mainYellow;
+
+		}
+	}
+
+	.scrollArrow span{
+		margin-left: 5px;
+		font-size: 7px;
+	}
+}
+
+/*========Second Section =======*/
+
+#sections{
+	width: 33.33%; 
+	height: 100%;
+	display: inline-block;
+	margin: 0px -2px;
+	padding:0;
+
+	img{
+		margin:0px auto;
+	}
+}
+#sectionsMobile{
+	height: 100%;
+	margin: 0px -2px;
+	padding:0px 5px;
+
+	img{
+		margin:0px auto;
+		width: 200px;
+	}
+}
+
+.secSectionTitle{
+	padding: 20px 0;
+}
+@media screen and (min-width:785px){
+	.secondSection{
+		position:relative;
+		width:100%;
+		height: 900px;
+		text-align:center;
+	}
+
+	.secSectionColumn1{
+		#sections
+	}
+	.secSectionColumn2{
+		#sections
+	}
+	.secSectionColumn3{
+		#sections
+	}
+}
+
+
+@media screen and (max-width:785px){
+	.secondSection{
+		position:relative;
+		width:100%;
+		height: 450px;
+		text-align:center;
+
+		h1{
+			font-size: 30px;
+			font-weight: 700;
+		}
+	}
+
+	.secSectionColumn1{
+	#sectionsMobile
+	}
+	.secSectionColumn2{
+		#sectionsMobile
+	}
+	.secSectionColumn3{
+		#sectionsMobile
+	}
+}
+
+/*=======================Sign Up Form =================================*/
+@media screen and (min-width:785px){
+	.signUpFormPage{
+	height: 995px; 
+	width:100%;
+	opacity: 1; 
+	background: url(images/happy-people-on-beach-m.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+ 	 margin-top: -50px;
+ 	 position:relative;
+ 	 }
+ 	 .signUpForm{
+	width:400px;
+	height: auto;
+    margin-top: -150px;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(50, 110, 138, 0.9);
+	padding: 20px 10px 20px 10px;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+
+	h2{
+		color:#fff;
+	}
+	h4{
+		color:#fff;
+		font-size: 15px;
+	}
+	input{
+		background: rgba(0, 0, 0, 0.5);
+		color:#fff;
+		height: 40px;
+	}
+	}
+
+	.formFirstLastName{
+			width:188px;
+			display:inline;
+		}
+}
+
+
+@media screen and (max-width:785px){
+	.signUpFormPage{
+	height: 667px; 
+	width:100%;
+	opacity: 1; 
+	background: url(images/happy-people-on-beach-m.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+ 	 margin-top: -50px;
+ 	 position:relative;
+ 	 }
+
+ 	  .signUpForm{
+		width:300px;	    
+	    position: absolute;
+	    top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(50, 110, 138, 0.9);
+		padding: 20px 10px 20px 10px;
+		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+
+		h2{
+			color:#fff;
+		}
+		h4{
+			color:#fff;
+			font-size: 15px;
+		}
+		input{
+			background: rgba(0, 0, 0, 0.5);
+			color:#fff;
+			height: 40px;
+		}
+		}
+
+		.formFirstLastName{
+			width:138px;
+			display:inline;
+		}
+
+}
+
+#signUpFormBtn{
+	background-color: @mainGreen; 
+	color: @mainBlue;
+	&:hover{
+	background-color:#cdb42b; 
+	}
+
+	}
+.signFormFooter{
+		margin-top: 40px;
+}
+	/*=================View Sign Ups ===========*/
+
+	.signUpsList {
+		width: 100%;
+		height: 995px; 
+		opacity: 1; 
+		background: url(images/blurred-new-cars-dealership-place-m.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	 	 background-size: cover;
+	 	 margin-top: -50px;
+	 	 position:relative;
+	}
+
+	.innerGroupSignUps{
+		margin-top: 10px;
+		border: 1px solid black;
+		width: 200px;
+	    top: 50%;
+		left: 50%;
+		padding: 20px 10px 20px 10px;
+		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+		h4{
+			font-size: 15px;
+		}
+	}
+
+	.viewSignUpHeader{
+		padding-top: 50px;
+	}
+		.searchResults{
+			margin: 10px 0;
+		}
