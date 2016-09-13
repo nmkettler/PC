@@ -12,10 +12,6 @@ var app = angular.module('pcApp', ['ngRoute', 'firebase']).constant('FIREBASE_UR
 
 	app.config(['$routeProvider', function($routeProvider) {
 	  $routeProvider.
-	  when('/test', {
-	      templateUrl: 'test.html',
-	      controller: 'MainController'
-	    }).
 	    when('/home', {
 	      templateUrl: 'views/home.html',
 	      controller: 'MainController'
@@ -33,7 +29,7 @@ var app = angular.module('pcApp', ['ngRoute', 'firebase']).constant('FIREBASE_UR
 	    	controller: 'MainController'
 	    }).
 	    otherwise({
-	      redirectTo: '/test'
+	      redirectTo: '/home'
 	    });
 
 }]);

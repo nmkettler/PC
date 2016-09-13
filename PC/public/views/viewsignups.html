@@ -1,0 +1,34 @@
+<div class="signUpsList">
+	<div class="viewSignUpHeader text-center center-block">
+			<h1>Signed Up Users</h1>
+			<input class="searchResults" ng-model="query" placeholder="Search Users">
+	</div>
+	<div class="outerFlipDiv">
+		<flip data-ng-repeat="userSignUp in (filteredItems  = (userSignUps | orderBy: 'order_prop' | filter:query))">
+				<flip-panel class="text-center">
+					<h4><i>Click to view more info</i></h4>	
+			        <h3><label>Dealership Name:</label><span> {{userSignUp.dealership}}</span></h3>				        						        
+			      </flip-panel>
+			      <flip-panel class="text-center">
+			        <h4><label>Dealership Name:</label><span> {{userSignUp.dealership}}</span></h4>								        			      
+			        <h4><label>First Name:</label><span> {{userSignUp.firstname}}</span></h4>					
+			        <h4><label>Last Name:</label><span> {{userSignUp.lastname}}</span></h4>
+					<h4><label>Email:</label><span> {{userSignUp.email}}</span></h4>
+					<h4><label>Zipcode:</label><span> {{userSignUp.zip}}</span>	</h4>
+			      </flip-panel>
+			</flip>
+	</div>
+			
+	</div>
+	<!--
+		<ul>
+			<li class ="listThumbnail" data-ng-repeat="userSignUp in (filteredItems  = (userSignUps | orderBy: 'order_prop' | filter:query))">
+				<div class="innerGroupSignUps center-block">				
+					<h4><label>First Name:</label><span> {{userSignUp.firstname}}</span></h4>
+					<h4><label>Last Name:</label><span> {{userSignUp.lastname}}</span></h4>
+					<h4><label>Email:</label><span> {{userSignUp.email}}</span></h4>
+					<h4><label>Zipcode:</label><span> {{userSignUp.zip}}</span>	</h4>
+				</div>		
+			</li>
+		</ul>
+			-->

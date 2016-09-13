@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "SOMEDATA": { //NOTE: removal of space character
+      ".read": true, 
+      ".write": false
+    }
+  }
+}

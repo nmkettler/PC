@@ -1,0 +1,33 @@
+<div class="signUpFormPage img-responsive">
+	<div class="signUpForm" >
+		<form ng-submit="addNewSignUp()">
+	  <fieldset>
+	    <legend><h2>Sign-Up</h2></legend>
+	    <div class="form-group">
+	    	<label><h4>Dealership Name</h4></label>	
+	      <input class="form-control" type="text" placeholder="Dealership" ng-model="signupDealership" ng-required="true"/> 
+	    </div>
+	    <p class="formNames">
+	      <label><h4>Name</h4></label>  	
+	      <input class="form-control formFirstLastName" type="text" placeholder="First Name" ng-model="signupFirstName" />
+	      <input class="form-control formFirstLastName" type="text" placeholder="Last Name" ng-model="signupLastName" ng-required="true"/>
+	    </p>
+	    <div class="form-group">
+	    <label><h4>Email</h4></label>
+	      <input class="form-control" type="email" placeholder="Email" ng-model="signupEmail" ng-required="true" ng-required="true"/>    
+	    </div>
+	    <div class="form-group">
+	    	<label><h4>Zipcode</h4></label>	
+	      <input class="form-control" type="text" placeholder="Zipcode" ng-model="zipcode" ng-required="true"/> 
+	    </div>
+	    <div class="signFormFooter">
+	    	<button class="btn btn-primary btn-lg" id="signUpFormBtn" type="submit">Submit</button>
+	   		<a ng-href="#/viewsignups">View Sign Up List</a>
+	    </div>
+	  </fieldset>
+	</form>
+	</div>	
+</div>
+
+
+

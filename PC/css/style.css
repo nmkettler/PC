@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 #centerItems {
   left: 0;
   line-height: 200px;
@@ -11,7 +12,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 html,
 body {
@@ -87,6 +88,7 @@ h1 {
     width: 100%;
   }
   .headerInfo h1 {
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     font-size: 40px;
     font-weight: 700;
@@ -94,6 +96,7 @@ h1 {
   .headerInfo h4 {
     color: #fff;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
   }
   #signUpBtn {
     background-color: #fdde33;
@@ -246,7 +249,7 @@ h1 {
   width: 33.33%;
   height: 100%;
   display: inline-block;
-  margin: 0px -2px;
+  margin: 0px -2px 75px -2px;
   padding: 0;
 }
 #sections img {
@@ -258,24 +261,27 @@ h1 {
   padding: 0px 5px;
 }
 #sectionsMobile img {
-  margin: 0px auto;
+  margin: 10px auto;
   width: 200px;
 }
 .secSectionTitle {
-  padding: 20px 0;
+  margin: 75px 0;
 }
 @media screen and (min-width: 785px) {
   .secondSection {
     position: relative;
     width: 100%;
-    height: 900px;
     text-align: center;
+  }
+  .secondSection h1 {
+    font-size: 40px;
+    padding: 15px 0px;
   }
   .secSectionColumn1 {
     width: 33.33%;
     height: 100%;
     display: inline-block;
-    margin: 0px -2px;
+    margin: 0px -2px 75px -2px;
     padding: 0;
   }
   .secSectionColumn1 img {
@@ -285,7 +291,7 @@ h1 {
     width: 33.33%;
     height: 100%;
     display: inline-block;
-    margin: 0px -2px;
+    margin: 0px -2px 75px -2px;
     padding: 0;
   }
   .secSectionColumn2 img {
@@ -295,7 +301,7 @@ h1 {
     width: 33.33%;
     height: 100%;
     display: inline-block;
-    margin: 0px -2px;
+    margin: 0px -2px 75px -2px;
     padding: 0;
   }
   .secSectionColumn3 img {
@@ -306,12 +312,10 @@ h1 {
   .secondSection {
     position: relative;
     width: 100%;
-    height: 450px;
     text-align: center;
   }
   .secondSection h1 {
     font-size: 30px;
-    font-weight: 700;
   }
   .secSectionColumn1 {
     height: 100%;
@@ -319,7 +323,7 @@ h1 {
     padding: 0px 5px;
   }
   .secSectionColumn1 img {
-    margin: 0px auto;
+    margin: 10px auto;
     width: 200px;
   }
   .secSectionColumn2 {
@@ -328,7 +332,7 @@ h1 {
     padding: 0px 5px;
   }
   .secSectionColumn2 img {
-    margin: 0px auto;
+    margin: 10px auto;
     width: 200px;
   }
   .secSectionColumn3 {
@@ -337,7 +341,7 @@ h1 {
     padding: 0px 5px;
   }
   .secSectionColumn3 img {
-    margin: 0px auto;
+    margin: 10px auto;
     width: 200px;
   }
 }
@@ -358,7 +362,6 @@ h1 {
   .signUpForm {
     width: 400px;
     height: auto;
-    margin-top: -150px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -437,6 +440,15 @@ h1 {
   margin-top: 40px;
 }
 /*=================View Sign Ups ===========*/
+.viewSignUpHeader {
+  padding-top: 150px;
+  width: 50%;
+}
+.searchResults {
+  margin: 20px 0;
+  width: 50%;
+  border-radius: 5px;
+}
 .signUpsList {
   width: 100%;
   height: 995px;
@@ -446,25 +458,158 @@ h1 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
   margin-top: -50px;
+}
+.outerFlipDiv {
+  width: 60%;
+  margin-left: 27%;
+}
+.flip {
+  float: left;
+  overflow: hidden;
+  -webkit-perspective: 800;
+  perspective: 800;
   position: relative;
 }
-.innerGroupSignUps {
-  margin-top: 10px;
+.flipBasic {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform 0.5s;
+  transition: transform .5s;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+  margin: 30px 0px 0px 10px;
   border: 1px solid black;
-  width: 200px;
-  top: 50%;
-  left: 50%;
-  padding: 20px 10px 20px 10px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  width: 250px !important;
+  height: 200px !important;
 }
-.innerGroupSignUps h4 {
+.flipBasic h4 {
   font-size: 15px;
 }
-.viewSignUpHeader {
+.flipBasic h3 {
+  font-size: 20px;
+}
+.flipBasic h3 span {
+  font-size: 30px;
+}
+.flipHideBack {
+  -webkit-transform: perspective(800px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+}
+.flipHideFront {
+  -webkit-transform: perspective(800px) rotateY(-180deg);
+  transform: perspective(800px) rotateY(-180deg);
+}
+/*=========Success==============*/
+.successDiv {
+  margin: 200px 0;
+  height: 900px;
+  width: 100%;
+  background: #fff;
+  background-size: cover;
+}
+/*====================Third Section ================*/
+.thirdSection {
+  width: 100%;
+  opacity: 1;
+  background: url(images/photodune-11222893-car-sell.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+@media screen and (min-width: 785px) {
+  .learnMoreDesc {
+    margin: 125px 0;
+    width: 50%;
+  }
+  .learnMoreDesc p {
+    margin-top: 15px;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 785px) {
+  .learnMoreDesc {
+    width: 60%;
+    margin: 50px 0;
+  }
+  .learnMoreDesc h1 {
+    font-size: 30px;
+  }
+  .learnMoreDesc p {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+}
+/*===========Fourth Section ==============*/
+.fourthSection {
+  background: #f6f3e8;
+  position: relative;
+}
+.benefitsSec {
+  width: 70%;
+  margin: 125px 0;
+}
+.benefitsSec p {
+  margin-top: 15px;
+  font-size: 17px;
+}
+/*===========Fifth Section ==============*/
+.fifthSection {
+  width: 100%;
+  position: relative;
+  opacity: 1;
+  background: url(images/young-people-on-a-road-trip.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.fifthSecInner {
+  margin: 150px 0;
+  text-align: center;
+}
+#fifthSignUpBtn {
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  width: 190px;
+  height: 60px;
+  margin: 0px 10px;
+  border-radius: 0 !important;
+  background-color: #a8e4b7;
+  color: #333333;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+#fifthSignUpBtn:hover {
+  background: #326e8a;
+  color: #f6f3e8;
+}
+/*===================Footer==================*/
+.footer-above {
+  background-color: #326e8a;
   padding-top: 50px;
 }
-.searchResults {
-  margin: 10px 0;
+.footer-below {
+  background-color: #e5e5e5;
+  color: black;
+}
+#footSocMedia a {
+  color: white;
+}
+#footNavText p a {
+  color: #80878c;
+}
+#footNavText p a:hover {
+  color: white;
+}
+#signInfooter {
+  margin-top: 200px;
 }
