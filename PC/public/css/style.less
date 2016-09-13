@@ -1,8 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 @mainBlue: #326e8a;
 @mainYellow: #fdde33;
 @mainGreen: #a8e4b7;
-
+@mainWhite: #f6f3e8;
 
 #centerItems{
 	left: 0;
@@ -18,8 +19,13 @@
 * {
 margin:0;
 padding:0;
-font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
 
+
+}
+html{
+	overflow-x:hidden;	
+	
 }
 
 html, body{
@@ -27,9 +33,11 @@ html, body{
 	padding-top:0;
 	height: 100%;
   	width: 100%;
+
 }
 
 h1{margin:0;}
+
 
 /*=========Navigation==============*/
 
@@ -95,6 +103,7 @@ h1{margin:0;}
 		#centerItems;
 
 		h1{
+		font-family: 'Roboto', sans-serif;
 			color:#fff;
 			font-size: 40px;
 			font-weight: 700;
@@ -102,6 +111,7 @@ h1{margin:0;}
 		h4{
 			color:#fff;
 			font-size: 20px;
+			font-family: 'Roboto', sans-serif;
 		}
 	}
 
@@ -241,7 +251,7 @@ h1{margin:0;}
 	width: 33.33%; 
 	height: 100%;
 	display: inline-block;
-	margin: 0px -2px;
+	margin: 0px -2px 75px -2px;
 	padding:0;
 
 	img{
@@ -254,13 +264,14 @@ h1{margin:0;}
 	padding:0px 5px;
 
 	img{
-		margin:0px auto;
+		margin:10px auto;
 		width: 200px;
 	}
 }
 
 .secSectionTitle{
-	padding: 20px 0;
+	margin: 75px 0;	
+	
 }
 @media screen and (min-width:785px){
 	.secondSection{
@@ -353,6 +364,7 @@ h1{margin:0;}
 			width:188px;
 			display:inline;
 		}
+
 }
 
 
@@ -496,6 +508,105 @@ h1{margin:0;}
 	background-size:cover;
 }
 
+
+
+/*====================Third Section ================*/
+
+.thirdSection{
+	opacity: 1; 
+	background: url(images/photodune-11222893-car-sell.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+ 	 position:relative;
+}
+
+
+@media screen and (min-width:785px){
+	.learnMoreDesc{
+	margin: 125px 0;	
+	width: 50%;
+
+	p{
+		margin-top: 15px;
+		font-size: 17px;
+	}
+}
+
+}
+
+@media screen and (max-width:785px){
+	.learnMoreDesc{
+	width: 60%;
+	margin: 125px 0;
+	h1{
+	font-size: 30px;
+	}
+	p{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+}
+}
+
+/*===========Fourth Section ==============*/
+
+.fourthSection{
+	background: @mainWhite;
+	position:relative;
+
+
+}
+
+.benefitsSec{
+	width: 70%;
+	margin: 125px 0;	
+
+	p{
+		margin-top: 15px;
+		font-size: 17px;
+	}
+}
+
+
+/*===========Fifth Section ==============*/
+.fifthSection{
+	position:relative;
+	opacity: 1; 
+	background: url(images/young-people-on-a-road-trip.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	 background-size: cover;
+}
+
+.fifthSecInner{
+	margin: 150px 0;
+	text-align:center;
+	
+}
+
+#fifthSignUpBtn{
+	font-weight: 700;
+	font-size: 20px;
+	border:none;
+	width: 190px;
+	height: 60px;
+	margin: 0px 10px;
+	border-radius: 0 !important;
+	background-color: #a8e4b7;
+	color: #333333;
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	&:hover{
+		background: @mainBlue;
+		color: @mainWhite;
+	}
+}
+
+
 /*===================Footer==================*/
 
 .footer-above{
@@ -519,52 +630,4 @@ h1{margin:0;}
 }
 #signInfooter{
   margin-top: 200px;
-}
-
-/*====================Third Section ================*/
-
-.thirdSection{
-	width:100%;
-	opacity: 1; 
-	background: url(images/photodune-11222893-car-sell.jpg) no-repeat center center;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
- 	 background-size: cover;
- 	 position:relative;
- 	 padding: 15px 0;
- 	 margin-top: 15px;
-}
-
-
-@media screen and (min-width:785px){
-	.learnMoreDesc{
-
-	width: 50%;
-
-	h1{
-	margin-top: 15px;
-	}
-	p{
-		margin-top: 15px;
-			font-size: 17px;
-	}
-}
-
-}
-
-@media screen and (max-width:785px){
-	.learnMoreDesc{
-
-	width: 60%;
-
-	h1{
-	font-size: 30px;
-	margin-top: 15px;
-	}
-	p{
-		margin-top: 15px;
-			font-size: 15px;
-	}
-}
 }

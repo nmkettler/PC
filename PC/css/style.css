@@ -14,6 +14,9 @@
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
+html {
+  overflow-x: hidden;
+}
 html,
 body {
   margin-top: 0;
@@ -514,7 +517,6 @@ h1 {
 }
 /*====================Third Section ================*/
 .thirdSection {
-  width: 100%;
   opacity: 1;
   background: url(images/photodune-11222893-car-sell.jpg) no-repeat center center;
   -webkit-background-size: cover;
@@ -536,7 +538,7 @@ h1 {
 @media screen and (max-width: 785px) {
   .learnMoreDesc {
     width: 60%;
-    margin: 50px 0;
+    margin: 125px 0;
   }
   .learnMoreDesc h1 {
     font-size: 30px;
@@ -561,7 +563,6 @@ h1 {
 }
 /*===========Fifth Section ==============*/
 .fifthSection {
-  width: 100%;
   position: relative;
   opacity: 1;
   background: url(images/young-people-on-a-road-trip.jpg) no-repeat center center;
