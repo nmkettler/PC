@@ -21,6 +21,11 @@ app.controller("MainController", ['$scope', '$firebaseArray', 'FIREBASE_URL', '$
 			});;
 		};
 
+        $(".typer").typed({
+            strings: ["Save Time", "Save Money", "Sell Cars", "PrepCar"],
+            typeSpeed: 100
+	        });
+
 	}]);
 
 
@@ -193,4 +198,30 @@ app.directive("flipPanel", function(){
       }
     }
   }
+});
+
+app.directive("signUpDirective", function() {
+    return {
+        restrict: "A",
+        link: function(scope, elem, attrs) {
+        	var fName="input[name='fName']";
+        	var lName="input[name='lName']";
+        	
+            //On click
+            $('input[name="dName"]').on("input", function(){
+            	$(fName).fadeIn("slow");
+            	$(".dealerformClass h4").fadeIn("slow");
+            })
+            $(fName).on("input", function(){
+            	$(lName).fadeIn("slow");
+            })
+            $(lName).on("input", function(){
+            	$(".email").fadeIn("slow");
+            })
+            $(".email").on("input", function(){
+            	$(".zip").fadeIn("slow");
+            })
+
+        }
+    }
 });

@@ -1,29 +1,29 @@
 <div class="signUpFormPage img-responsive">
 	<div class="signUpForm" >
-		<form ng-submit="addNewSignUp()">
+		<form ng-submit="addNewSignUp()" name="signUpFormName">
 	  <fieldset>
 	    <legend><h2>Sign-Up</h2></legend>
 	    <div class="form-group">
 	    	<label><h4>Dealership Name</h4></label>	
-	      <input class="form-control" type="text" placeholder="Dealership" ng-model="signupDealership" ng-required="true"/> 
+	      <input class="form-control" type="text" name="dName" placeholder="Dealership" ng-model="signupDealership" ng-required="true"/> 
 	    </div>
 	    <div class="form-group" class="dealerformClass">
 	    	<p>
 	      <label><h4>Name</h4></label>  	
-	      <input class="form-control formFirstLastName" type="text" placeholder="First Name" ng-model="signupFirstName" />
-	      <input class="form-control formFirstLastName" type="text" placeholder="Last Name" ng-model="signupLastName" ng-required="true"/>
+	      <input sign-up-directive class="form-control formFirstLastName" name="fName" type="text" placeholder="First Name" ng-model="signupFirstName" />
+	      <input class="form-control formFirstLastName" name="lName" type="text" placeholder="Last Name" ng-model="signupLastName" ng-required="true" />
 	    </p>
 	    </div>
-	    <div class="form-group">
+	    <div class="form-group email">
 	    <label><h4>Email</h4></label>
 	      <input class="form-control" type="email" placeholder="Email" ng-model="signupEmail" ng-required="true" ng-required="true"/>    
 	    </div>
-	    <div class="form-group">
+	    <div class="form-group zip">
 	    	<label><h4>Zipcode</h4></label>	
-	      <input class="form-control" type="text" placeholder="Zipcode" ng-model="zipcode" ng-required="true"/> 
+	      <input class="form-control" type="text" name="zip" placeholder="Zipcode" ng-model="zipcode" ng-required="true"/> 
 	    </div>
 	    <div class="signFormFooter">
-	    	<button class="btn btn-primary btn-lg" id="signUpFormBtn" type="submit">Submit</button>
+	    	<button ng-disabled="signUpFormName.$invalid" class="btn btn-primary btn-lg" id="signUpFormBtn" type="submit">Submit</button>
 	    </div>
 	  </fieldset>
 	</form>

@@ -34,7 +34,7 @@ var app = angular.module('pcApp', ['ngRoute', 'firebase']).constant('FIREBASE_UR
 
 }]);
   
-$(document).ready(function(){
+
 
 	$(function changeNavOnScroll(){			
 		/*$(document).scroll(function() {
@@ -56,4 +56,3 @@ $(document).ready(function(){
 
 		});
 
-});
