@@ -45,6 +45,25 @@ h1 {
 .logo {
   width: 50px;
 }
+.nav.nav-center {
+  margin: 0;
+  float: none;
+}
+.navbar-inner {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .nav.nav-center {
+    margin: 0;
+    float: none;
+  }
+  .navbar-inner {
+    text-align: center;
+  }
+  .signUpNavBtn {
+    margin-top: -50px;
+  }
+}
 /*=========Homepage========*/
 #homeButtons {
   font-weight: 700;
@@ -117,7 +136,7 @@ h1 {
   }
   #signUpBtn {
     background-color: #fdde33;
-    color: #326e8a;
+    color: #1976D2;
     font-weight: 700;
     font-size: 20px;
     border: none;
@@ -130,7 +149,7 @@ h1 {
     background-color: #cdb42b;
   }
   #learnMoreBtn {
-    background-color: #326e8a;
+    background-color: #1976D2;
     color: #fdde33;
     font-weight: 700;
     font-size: 20px;
@@ -163,13 +182,32 @@ h1 {
     transition: all 200ms ease-in;
   }
   .scrollArrow:hover {
-    background: #326e8a;
+    background: #1976D2;
     color: #fdde33;
     border-color: #fdde33;
   }
   .scrollArrow span {
     margin-left: 10px;
   }
+}
+.navButton {
+  display: none;
+}
+.mobileNavButton {
+  display: none;
+}
+.signUpNavBtn {
+  background: #fdde33;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  width: 160px;
+  height: 50px;
+  border-radius: 0 !important;
+  color: #1976D2;
+}
+.signUpNavBtn:hover {
+  background-color: #cdb42b;
 }
 @media screen and (max-width: 785px) {
   .main-hero-bg {
@@ -204,7 +242,7 @@ h1 {
   }
   #signUpBtn {
     background-color: #fdde33;
-    color: #326e8a;
+    color: #1976D2;
     font-weight: 700;
     font-size: 15px;
     border: none;
@@ -218,7 +256,7 @@ h1 {
     background-color: #cdb42b;
   }
   #learnMoreBtn {
-    background-color: #326e8a;
+    background-color: #1976D2;
     color: #fdde33;
     font-weight: 700;
     font-size: 15px;
@@ -252,7 +290,7 @@ h1 {
     transition: all 200ms ease-in;
   }
   .scrollArrow:hover {
-    background: #326e8a;
+    background: #1976D2;
     color: #fdde33;
     border-color: #fdde33;
   }
@@ -271,6 +309,14 @@ h1 {
 }
 #sections img {
   margin: 0px auto;
+}
+#sections:hover {
+  -webkit-transform: scale3d(1.001, 1.001, 1);
+  transform: scale3d(1.01, 1.01, 1);
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 #sectionsMobile {
   height: 100%;
@@ -304,6 +350,14 @@ h1 {
   .secSectionColumn1 img {
     margin: 0px auto;
   }
+  .secSectionColumn1:hover {
+    -webkit-transform: scale3d(1.001, 1.001, 1);
+    transform: scale3d(1.01, 1.01, 1);
+    -webkit-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
   .secSectionColumn2 {
     width: 33.33%;
     height: 100%;
@@ -314,6 +368,14 @@ h1 {
   .secSectionColumn2 img {
     margin: 0px auto;
   }
+  .secSectionColumn2:hover {
+    -webkit-transform: scale3d(1.001, 1.001, 1);
+    transform: scale3d(1.01, 1.01, 1);
+    -webkit-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
   .secSectionColumn3 {
     width: 33.33%;
     height: 100%;
@@ -323,6 +385,14 @@ h1 {
   }
   .secSectionColumn3 img {
     margin: 0px auto;
+  }
+  .secSectionColumn3:hover {
+    -webkit-transform: scale3d(1.001, 1.001, 1);
+    transform: scale3d(1.01, 1.01, 1);
+    -webkit-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
   }
 }
 @media screen and (max-width: 785px) {
@@ -449,8 +519,8 @@ h1 {
   }
 }
 #signUpFormBtn {
-  background-color: #a8e4b7;
-  color: #326e8a;
+  background-color: #81C784;
+  color: #1976D2;
 }
 #signUpFormBtn:hover {
   background-color: #cdb42b;
@@ -592,7 +662,7 @@ input[name='lName'],
 }
 /*===========Fourth Section ==============*/
 .fourthSection {
-  background: #f6f3e8;
+  background: #F5F5F5;
   position: relative;
 }
 .benefitsSec {
@@ -643,8 +713,8 @@ input[name='lName'],
   transition: 0.3s ease-in-out;
 }
 #fifthSignUpBtn:hover {
-  background: #326e8a;
-  color: #f6f3e8;
+  background: #1976D2;
+  color: #F5F5F5;
 }
 /*===================Footer==================*/
 .footer-above {
@@ -709,4 +779,65 @@ input[name='lName'],
 }
 #hoverLogo {
   display: none;
+}
+/*===========================Scrolling Animations =====================*/
+.post,
+.postLeft {
+  visibility: hidden;
+}
+.animated {
+  visibility: visible !important;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 30px;
+  background: rgba(50, 110, 138, 0.8);
+  color: #444;
+  cursor: pointer;
+  border: 1px solid #fdde33;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+}
+#back-to-top i {
+  text-align: center;
+  color: #f6f3e8;
+}
+#back-to-top:hover {
+  background: rgba(168, 228, 183, 0.8);
+}
+#back-to-top:hover i {
+  color: #000;
+}
+#back-to-top.show {
+  opacity: 1;
+}
+@media screen and (max-width: 785px) {
+  #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 30px;
+    background: rgba(50, 110, 138, 0.8);
+    color: #444;
+    cursor: pointer;
+    border: 1px solid #fdde33;
+    border-radius: 5px;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+  }
 }

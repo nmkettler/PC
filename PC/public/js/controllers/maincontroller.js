@@ -21,13 +21,88 @@ app.controller("MainController", ['$scope', '$firebaseArray', 'FIREBASE_URL', '$
 			});;
 		};
 
+		//typed.js functionality
         $(".typer").typed({
             strings: ["Save Time", "Save Money", "Sell Cars", "PrepCar"],
             typeSpeed: 100
 	        });
 
+		    $('.post').addClass(".hide_me").viewportChecker({
+		        classToAdd: 'visible animated fadeIn',
+		        offset: 100
+		       });   
+
+		    $(function showNavButton(){
+		    	var navButtonAnchor = $(".navButtonAnchor");
+		    	if(navButtonAnchor.length){
+		    		var topOfAnchor = navButtonAnchor.offset().top;
+		    		 if ($('.main-hero-bg').width() >= 785) {
+				   	 	var navButton = $('.navButton');			    
+					    $(window).scroll(function(){
+					    	if($(window).scrollTop() > topOfAnchor){
+					    		$(navButton).fadeIn();
+					    		$('.homeButtonGroup').fadeOut();
+					    	}
+					    	else{
+					    		$(navButton).fadeOut();
+					    		$('.homeButtonGroup').show();
+
+					    	}
+					    })
+				   	 }
+				   	 if ($('.main-hero-bg').width() <= 785) {
+				   	 	var mobileNavButton = $('.mobileNavButton');
+				   	 	$(window).scroll(function(){
+					    	if($(window).scrollTop() > topOfAnchor){
+					    		$(mobileNavButton).fadeIn();
+					    		$('.homeButtonGroup').fadeOut();
+					    	}
+					    	else{
+					    		$(mobileNavButton).fadeOut();
+					    		$('.homeButtonGroup').show();
+
+					    	}
+					    })
+				   	 }
+			    	}	   	
+		   });	
+
+				
 	}]);
 
+
+function onViewport(el, elClass, offset, callback) {
+  /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
+  var didScroll = false;
+  var this_top;
+  var height;
+  var top;
+  
+  if(!offset) { var offset = 0; }
+ 
+  $(window).scroll(function() {
+      didScroll = true;
+  });
+ 
+  setInterval(function() {
+    if (didScroll) {
+      didScroll = false;
+      top = $(this).scrollTop();
+ 
+      $(el).each(function(i){
+        this_top = $(this).offset().top - offset;
+        height   = $(this).height();
+ 
+        // Scrolled within current section
+        if (top >= this_top && !$(this).hasClass(elClass)) {
+          $(this).addClass(elClass);
+ 
+          if (typeof callback == "function") callback(el);
+        }
+      });
+    }
+  }, 100);
+}
 
 app.directive('anchorSmoothScroll', function($location){
 	'use strict';
@@ -225,3 +300,62 @@ app.directive("signUpDirective", function() {
         }
     }
 });
+
+app.directive("backToTop", function(){
+    return{
+        restrict: "A",
+        link: function(scope, elem, attrs){
+            if ($('#back-to-top').length) {
+                var scrollTrigger = 50, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('#back-to-top').on('click', function (e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            }
+        }
+    }
+})
+
+app.directive("backToTop", function(){
+    return{
+        restrict: "A",
+        link: function(scope, elem, attrs){
+            if ($('#back-to-top').length) {
+                var scrollTrigger = 50, // px
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('#back-to-top').on('click', function (e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            }
+        }
+    }
+})
+

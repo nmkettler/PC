@@ -54,5 +54,5 @@ var app = angular.module('pcApp', ['ngRoute', 'firebase']).constant('FIREBASE_UR
         }
       });
 
-		});
+	});
 

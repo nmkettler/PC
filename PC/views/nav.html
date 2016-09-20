@@ -1,7 +1,15 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header navbar-fixed nav">
-      <a ng-href="#/home"><img class="img-responsive logo" src="css/images/logos/PC_Logos/PC_Logo-Light_1.png"></a>
+      <a ng-href="#/home"><img class="img-responsive logo" src="css/images/logos/PC_Logos/PC_Logo-Light_1.png"></a>			
+    </div>
+    <div class="navbar-inner">
+    	<ul class="nav nav-center navButton">			
+    		<li id="navButton"><button ng-click="go('/signup')" class="btn btn-primary btn-lg signUpNavBtn">Sign Up</button></li>	
+    	</ul>
+    	<ul class="nav nav-center mobileNavButton">			
+    		<li id="mobileNavButton"><button ng-click="go('/signup')" class="btn btn-primary btn-lg signUpNavBtn">Sign Up</button></li>	
+    	</ul>
     </div>
   </div>
 </nav>
